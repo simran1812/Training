@@ -1,0 +1,46 @@
+﻿<html>
+<head>
+    <title>assign task</title><style>
+    fieldset {
+        border-right: 5px solid black;
+        border-bottom: 5px solid black;
+        border-left: 5px solid black;
+        border-top: 5px solid black;
+    }
+</style>
+</head>
+<body>
+    <fieldset style="background-color: lightblue; width:1000px" align="center">
+        <div>
+            <center>
+                <h2> Assign task</h2>
+
+                <label for="Emp id "><h4>Employee id:</h4></label>
+                <input type="number" id="Emp id" name="Emp id" required>
+
+                <label for="Emp name "><h4>Employee name:</h4></label>
+                <input type="text" id="Emp name" name="Emp name" required>
+
+                <label for="Emp email "><h4>Employee email:</h4></label>
+                <input type="email" id="Emp email" name="Emp email" required>
+
+                <label for="Task id "><h4>Task id:</h4></label>
+                <input type="number" id="Task id" name="Task id" required><br>
+
+                <label for="Task name "><h4>Task name:</h4></label>
+                <input type="text" id="Task name" name="Task name" required><br>
+
+                <label for="Task description"><h4>Task Description:</h4></label>
+                <textarea id="Task description" name="Task description" rows="10" cols="50">
+            </textarea><br>
+
+                <br><form method="POST" action="admin.html">
+                    Assign task:<input type="submit" value="Assign">
+                </brform>
+
+            </center>
+        </div>
+    </fieldset>
+</body>
+<br>
+</html>

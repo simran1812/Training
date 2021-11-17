@@ -1,0 +1,74 @@
+﻿<html>
+<head><title> Create task</title>
+      <style>
+          fieldset {
+              border-right: 5px solid black;
+              border-bottom: 5px solid black;
+              border-left: 5px solid black;
+              border-top: 5px solid black;
+              align:center;
+          }
+      </style></head>
+<body>
+    <fieldset style="background-color: lightblue; width:1000px" align="center">
+        
+        <div>
+            <center>
+                <legend><h2>Task details:</h2></legend>
+                <form method="POST" action="admin.html">
+                    <label for="Task id "><h4>Task id:</h4></label>
+                    <input type="number" id="Task id" name="Task id" required><br>
+
+                    <label for="Task name "><h4>Task name:</h4></label>
+                    <input type="text" id="Task name" name="Task name" required><br>
+
+                    <label for="Task description"><h4>Task Description:</h4></label>
+                    <textarea id="Task description" name="Task description" rows="10" cols="50">
+    </textarea>
+                    <center>
+                        <h4> Priority of Task:</h4>
+                        <input type="radio" id="High" name="Priority" value="High">
+                        <label for="High">High</label>
+                        <input type="radio" id="low" name="Priority" value="low">
+                        <label for="low">low</label>
+                        <input type="radio" id="medium" name="Priority" value="medium">
+                        <label for="medium">medium</label><br>
+                    </center>
+
+                    <center>
+                        <h4>Status of Task:</h4>
+                        <input type="radio" id="Cancelled" name="Status" value="Cancelled">
+                        <label for="Cancelled">Cancelled</label>
+                        <input type="radio" id="Close" name="Status" value="Close">
+                        <label for="Close">Close</label>
+                        <input type="radio" id="Inprogress" name="Status" value="Inprogress">
+                        <label for="Inprogress">Inprogress</label>
+                        <input type="radio" id="OnHold" name="Status" value="OnHold">
+                        <label for="OnHold">OnHold</label><br>
+                    </center>
+
+                    <label for="Task Notes"><h4>Task Notes:</h4></label>
+                    <textarea id="Task Notes" name="Task Notes" rows="10" cols="50">
+    </textarea>
+
+                    <p><a href="#high">Jump to high priority tasks</a></p>
+                    <p><a href="#low">Jump to low priority tasks</a></p>
+                    <p><a href="#medium">Jump to medium priority tasks</a></p>
+
+                    <label for="owner id "><h4>owner id:</h4></label>
+                    <input type="number" id="owner id" name="owner id" required><br>
+                    <label for="Creator id "><h4>Creator id:</h4></label>
+                    <input type="number" id="Creator id" name="Creator id" required><br>
+                    <label for="Created on "><h4>Created on:</h4></label>
+                    <input type="date" id="Created on" name="Created on" required><br>
+                    <label for="Modified on "><h4>Modified on:</h4></label>
+                    <input type="date" id="Modified on" name="Modified on" required><br><br>
+
+                    <button onclick="Task created">Submit</button>
+
+                </form>
+            </center>
+        </div>
+</fieldset>
+</body>
+</html>
