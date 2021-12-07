@@ -1,21 +1,34 @@
-package com.sonata.InterfaceExamples;
+package com.sonata.JavaBean;
 
 public class Bank {
-	int AccId;
-	String AccName;
-	double Balance;
-	
-	public Bank() {}
-	
-	public Bank (int accId, String accName, double balance) {
-		AccId = accId;
-		AccName = accName;
-		Balance = balance;
+	private int accNo;
+	private String accName;
+	private double accBalance;
+	public int getAccNo() {
+		return accNo;
 	}
-	void display() {
-		System.out.println(this.AccId);
-		System.out.println(this.AccName);
-		System.out.println(this.Balance);
+	public void setAccNo(int accNo) {
+		this.accNo = accNo;
 	}
+	public String getAccName() {
+		return accName;
+	}
+	public void setAccName(String accName) {
+		this.accName = accName;
+	}
+	public double getAccBalance() {
+		return accBalance;
+	}
+	public void setAccBalance(double accBalance) {
+		this.accBalance = accBalance;
+	}
+	@Override
+	public String toString() {
+		return "Bank [accNo=" + accNo + ", accName=" + accName + ", accBalance=" + accBalance + "]";
+	}
+	
+	
 
 }
+
+
