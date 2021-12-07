@@ -1,8 +1,9 @@
-package com.sonata.ExceptionExample;
+package com.sonata;
 
-public class MyOwnException extends Exception {
-	MyOwnException(String s) {
+	public class MyOwnException extends Exception {
+		public MyOwnException(String s) {
 		super(s);
-	}
+		}
+        }
 
-}
+
