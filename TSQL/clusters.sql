@@ -1,0 +1,59 @@
+CREATE TABLE Person (
+id INT,
+Securityno INT,
+Sal numeric(18,9),
+DOB DATETIME,
+Name VARCHAR(80)
+);
+GO
+
+
+-- Insert rows with random values
+DECLARE @row INT;
+DECLARE @string VARCHAR(80), @length INT, @code INT;
+SET @row = 0;
+WHILE @row < 100000 BEGIN
+SET @row = @row + 1;
+
+
+
+-- Build the random string
+SET @length = ROUND(80*RAND(),0);
+
+SET @string = 'Name';
+WHILE @length > 0 BEGIN
+SET @length = @length - 1;
+SET @code = ROUND(32*RAND(),0) - 6;
+SET @string = @string + CHAR(ASCII('a')+@code-1);
+END
+
+
+
+-- Ready for the record
+SET NOCOUNT ON;
+INSERT INTO person VALUES (
+@row,
+ROUND(2000000*RAND()-1000000,0),
+ROUND(2000000*RAND()-1000000,9),
+CONVERT(DATETIME, ROUND(60000*RAND()-30000,9)),
+@string
+)
+END
+
+select* from person 
+
+update person set name='John' where id between 1 and 5000
+update person set name='Peter' where id between 5001 and 10000
+update person set name='Mark' where id between 10001 and 15000
+update person set name='Gray' where id between 15001 and 20000
+update person set name='Levy' where id between 20001 and 25000
+update person set name='Chris' where id between 25001 and 30000
+update person set name='Jason' where id > 30000
+
+select* from person where name='Chris'
+
+SET STATISTICS IO, TIME ON;
+
+CREATE CLUSTERED INDEX PERSON_IDX ON PERSON(NAME)
+
+
